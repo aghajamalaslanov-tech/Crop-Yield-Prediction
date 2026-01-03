@@ -78,6 +78,14 @@ Weather impact analysis
 
 Future crop yield predictions under different climate scenarios
 
+## 🎯 Result
+
+Sample
+
+## 🧩 Challenges
+
+Sample
+
 ## Team Members
 
 [Gülgün Salamzadə](https://github.com/GulgunSalamzada)
