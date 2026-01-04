@@ -6,3 +6,4 @@ cryptography
 matplotlib
 scikit-learn
 streamlit
+seaborn
