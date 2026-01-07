@@ -51,4 +51,4 @@ Visual Reports: High-quality charts showing the intersection of climate and farm
 
 [Gülgün Salamzadə](https://github.com/GulgunSalamzada)
 
-[Ağacamal Aslanov](https://github.com/aghajamalaslanov-tech)
+[Jalə Hüseynova](https://github.com/JalaHuseynova)
