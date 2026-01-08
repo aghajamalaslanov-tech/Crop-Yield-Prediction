@@ -6,8 +6,9 @@ import seaborn as sns
 import os
 
 # 1. Fayl yollarını avtomatik təyin etmək
+# Bu hissə proqramın öz qovluğunu tapmasını təmin edir
 current_dir = os.path.dirname(os.path.abspath(__file__))
-csv_path = os.path.join(current_dir, "crop_yield_prediction_with_weather.csv")
+csv_path = os.path.join(current_dir, "crop_yield_prediction.csv")
 model_path = os.path.join(current_dir, "model.pkl")
 
 # 2. Səhifə konfiqurasiyası
@@ -36,19 +37,19 @@ def load_model():
 model = load_model()
 
 # --- SIDEBAR & NAV ---
-st.sidebar.title("Navigation")
+st.sidebar.title("🔎 Navigation")
 page = st.sidebar.radio("Go to:", ["Project Overview", "Data Exploration", "Yield Prediction"])
 
 if df is not None:
     st.sidebar.divider()
-    st.sidebar.header("Global Filters")
+    st.sidebar.header("🌐 Global Filters")
     selected_countries = st.sidebar.multiselect(
-        "Select Countries:", 
+        "🌍 Select Countries:", 
         options=sorted(df['Area'].unique().tolist()),
-        default=df['Area'].unique()[:5]
+        default=df['Area'].unique()[:3]
     )
     min_year, max_year = int(df['Year'].min()), int(df['Year'].max())
-    year_range = st.sidebar.slider("Select Year Range:", min_year, max_year, (min_year, max_year))
+    year_range = st.sidebar.slider("🗓️ Select Year Range:", min_year, max_year, (min_year, max_year))
     
     filtered_df = df[(df['Area'].isin(selected_countries)) & 
                      (df['Year'] >= year_range[0]) & 
@@ -61,15 +62,15 @@ else:
 if page == "Project Overview":
     st.title("🌾 Crop Yield Prediction with Weather Analytics")
     st.markdown("""
-    ### Project Mission
+    ### 🎯 Project Mission
     This project bridges the gap between climate science and agriculture. By analyzing historical yield records alongside temperature and precipitation patterns, we identify key environmental drivers of food production.
 
-    ### Key Features:
+    ### 🔑 Key Features:
     * **Data Collection**: Integration of historical yield records and weather API data.
     * **Exploratory Analysis**: Correlation studies between climate fluctuations and productivity.
     * **Machine Learning**: Predictive forecasting using a **Random Forest Regressor**.
     """)
-    st.image("https://github.com/JalaHuseynova/Crop-Yield-Prediction/blob/main/Diagram.drawio.svg?raw=true", caption="System Architecture")
+    st.image(r"C:\Users\User\Downloads\streamlit\Foundation\diagram_drawio.svg", caption="System Architecture")
 
 elif page == "Data Exploration":
     if df is not None:
@@ -96,7 +97,7 @@ elif page == "Yield Prediction":
                 in_item = st.selectbox("Crop:", df['Item'].unique())
                 in_year = st.number_input("Year:", value=2026)
             with c2:
-                in_temp = st.slider("Temp (°C):", -10, 50, 20)
+                in_temp = st.slider("Temperature (°C):", -10, 50, 20)
                 in_rain = st.number_input("Rainfall (mm):", value=1000)
                 in_pest = st.number_input("Pesticides (tonnes):", value=100)
             
