@@ -6,7 +6,6 @@ import seaborn as sns
 import os
 
 # 1. Fayl yollarını avtomatik təyin etmək
-# Bu hissə proqramın öz qovluğunu tapmasını təmin edir
 current_dir = os.path.dirname(os.path.abspath(__file__))
 csv_path = os.path.join(current_dir, "crop_yield_prediction_with_weather.csv")
 model_path = os.path.join(current_dir, "model.pkl")
