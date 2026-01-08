@@ -7,3 +7,7 @@ matplotlib
 scikit-learn
 streamlit
 seaborn
+pathlib
+plotly
+statsmodel
+joblib
