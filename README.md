@@ -13,7 +13,7 @@ The project includes a robust data pipeline from SQL storage to Machine Learning
 ## 🔄 Project Workflow Diagram
 Below is the architectural flow of the project, illustrating the transition from raw data collection to predictive insights.
 
-![Project Workflow](/workspaces/Crop-Yield-Prediction/data_diagram.svg)
+/workspaces/Crop-Yield-Prediction/data_diagram.svg
 
 ## 🛠 Project Workflow
 
