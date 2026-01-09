@@ -28,7 +28,6 @@ def load_data():
 
 df = load_data()
 
-
 # 4. Modelin yüklənməsi
 @st.cache_resource
 def load_model():
