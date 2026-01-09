@@ -1,13 +1,12 @@
 pandas
 python-dotenv
-sqlalchemy 
+sqlalchemy
 pymysql
 cryptography
 matplotlib
 scikit-learn
 streamlit
 seaborn
-pathlib
 plotly
-statsmodel
+statsmodels
 joblib
