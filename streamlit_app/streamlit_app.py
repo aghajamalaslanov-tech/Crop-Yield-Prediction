@@ -70,7 +70,7 @@ if page == "Project Overview":
     * **Exploratory Analysis**: Correlation studies between climate fluctuations and productivity.
     * **Machine Learning**: Predictive forecasting using a **Random Forest Regressor**.
     """)
-    st.image(r"/workspaces/Crop-Yield-Prediction/data_diagram.svg", caption="System Architecture")
+    st.image("data_diagram.svg", caption="System Architecture")
 
 elif page == "Data Exploration":
     if df is not None:
