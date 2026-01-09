@@ -5,11 +5,16 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import os
 
-# 1. Fayl yollarını avtomatik təyin etmək
-# Bu hissə proqramın öz qovluğunu tapmasını təmin edir
+# 1. Dinamik yol təyini (Bu hissə mütləqdir)
+# current_dir -> streamlit_app qovluğunu göstərir
 current_dir = os.path.dirname(os.path.abspath(__file__))
+# root_dir -> Layihənin ana qovluğunu (Crop-Yield-Prediction) göstərir
+root_dir = os.path.dirname(current_dir)
+
+# Fayl yolları
 csv_path = os.path.join(current_dir, "crop_yield_prediction.csv")
 model_path = os.path.join(current_dir, "model.pkl")
+
 
 # 2. Səhifə konfiqurasiyası
 st.set_page_config(page_title="Crop Yield Dashboard", page_icon="🌾", layout="wide")
