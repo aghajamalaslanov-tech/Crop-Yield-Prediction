@@ -8,7 +8,6 @@ import os
 
 # 1. Fayl yollarını avtomatik təyin etmək
 # Bu hissə proqramın öz qovluğunu tapmasını təmin edir
-# Bu hissə həm GitHub-da, həm Codespace-də avtomatik işləyir
 current_dir = os.path.dirname(os.path.abspath(__file__))
 csv_path = os.path.join(current_dir, "crop_yield_prediction.csv")
 model_path = os.path.join(current_dir, "model.pkl")
@@ -17,16 +16,18 @@ model_path = os.path.join(current_dir, "model.pkl")
 st.set_page_config(page_title="Crop Yield Dashboard", page_icon="🌾", layout="wide")
 
 # 3. Məlumatın yüklənməsi
+
 @st.cache_data
 def load_data():
     if os.path.exists(csv_path):
-        df = pd.read_csv(csv_path)
-        if 'Unnamed: 0' in df.columns:
-            df = df.drop(columns=['Unnamed: 0'])
-        return df
+        data = pd.read_csv(csv_path)
+        if 'Unnamed: 0' in data.columns:
+            data = data.drop(columns=['Unnamed: 0'])
+        return data
     return None
 
 df = load_data()
+
 
 # 4. Modelin yüklənməsi
 @st.cache_resource
