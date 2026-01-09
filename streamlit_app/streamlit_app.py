@@ -115,4 +115,3 @@ elif page == "Yield Prediction":
                 
                 res = model.predict(input_df)[0]
                 st.success(f"### Predicted Yield: {res:,.2f} hg/ha")
-                st.success("Prediction complete!")
