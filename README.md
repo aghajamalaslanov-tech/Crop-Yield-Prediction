@@ -47,11 +47,23 @@ Visual Reports: High-quality charts showing the intersection of climate and farm
 
 ## 🎯 Result
 
-Sample
+### High-Accuracy Models: Successfully predicted crop yields using historical and real-time climate data.
+
+Interactive App: Deployed a Streamlit dashboard for dynamic forecasting and trend visualization.
+
+Automated Pipeline: Integrated APIs, Docker, and SQL into a seamless end-to-end data workflow.
+
+Climate Insights: Identified key environmental drivers impacting global food productivity.
 
 ## 🧩 Challenges
 
-Sample
+Data Integration: Synchronizing mismatched timeframes between harvest cycles and weather patterns.
+
+API Constraints: Managing rate limits and data consistency during large-scale API ingestion.
+
+Feature Selection: Isolating critical climate variables from noisy environmental datasets.
+
+Scalability: Ensuring stable performance across a containerized (Docker) environment.
 
 ## Team Members
 
