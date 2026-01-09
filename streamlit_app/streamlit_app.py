@@ -60,7 +60,7 @@ else:
 # --- MAIN CONTENT ---
 # PAGE 1: PROJECT OVERVIEW
 if page == "Project Overview":
-    st.title("🌾 Crop Yield Prediction with Weather Analytics")
+    st.title("🌾 Crop Yield Prediction & Climate Analysis Dashboard")
     st.markdown("""
     ### 🎯 Project Mission
     This project bridges the gap between climate science and agriculture. By analyzing historical yield records alongside temperature and precipitation patterns, we identify key environmental drivers of food production.
