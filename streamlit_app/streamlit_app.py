@@ -33,9 +33,10 @@ def load_data():
         if 'Unnamed: 0' in data.columns:
             data = data.drop(columns=['Unnamed: 0'])
         return data
-    return None
-
-df = load_data()
+    else:
+        # Fayl tapılmadıqda xəta göstər və boş DataFrame qaytar
+        st.error(f"Kritik Xəta: {csv_path} tapılmadı!")
+        return pd.DataFrame() # Boş cədvəl qaytarır ki, kod davam edə bilsin
 
 # 4. Modelin yüklənməsi
 @st.cache_resource
