@@ -26,6 +26,7 @@ st.set_page_config(page_title="Crop Yield Dashboard", page_icon="🌾", layout="
 
 # 3. Məlumatın yüklənməsi
 
+# 3. Məlumatın yüklənməsi
 @st.cache_data
 def load_data():
     if os.path.exists(csv_path):
@@ -34,9 +35,10 @@ def load_data():
             data = data.drop(columns=['Unnamed: 0'])
         return data
     else:
-        # Fayl tapılmadıqda xəta göstər və boş DataFrame qaytar
-        st.error(f"Kritik Xəta: {csv_path} tapılmadı!")
-        return pd.DataFrame() # Boş cədvəl qaytarır ki, kod davam edə bilsin
+        # Fayl yoxdursa None yox, boş DataFrame qaytarırıq ki, NameError olmasın
+        return pd.DataFrame() 
+
+df = load_data()
 
 # 4. Modelin yüklənməsi
 @st.cache_resource
