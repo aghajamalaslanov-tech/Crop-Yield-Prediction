@@ -8,7 +8,7 @@ import os
 # 1. YOL TƏYİNİ (Sənin köhnə xətalı yollarını bu əvəz edir)
 # Bu hissə həm GitHub-da, həm Codespace-də avtomatik işləyir
 current_dir = os.path.dirname(os.path.abspath(__file__))
-csv_path = os.path.join(current_dir, "prediction.csv")
+csv_path = os.path.join(current_dir, "crop_yield_prediction.csv")
 model_path = os.path.join(current_dir, "model.pkl")
 
 # SVG şəkli bir pillə yuxarıdadır (root folder)
