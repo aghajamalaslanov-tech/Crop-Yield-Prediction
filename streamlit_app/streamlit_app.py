@@ -111,7 +111,7 @@ elif page == "Yield Prediction":
                 in_item = st.selectbox("Crop:", df['Item'].unique())
                 in_year = st.number_input("Year:", value=2026)
             with c2:
-                in_temp = st.slider("Temperature (°C):", -10, 35, 20)
+                in_temp = st.slider("Temperature (°C):", -10, 40, 20)
                 in_rain = st.number_input("Rainfall (mm):", value=1000)
                 in_pest = st.number_input("Pesticides (tonnes):", value=100)
             
