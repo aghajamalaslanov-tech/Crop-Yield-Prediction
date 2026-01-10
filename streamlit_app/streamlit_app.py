@@ -9,7 +9,8 @@ import os
 # 1. Fayl yollarını avtomatik təyin etmək
 # Bu hissə proqramın öz qovluğunu tapmasını təmin edir
 current_dir = os.path.dirname(os.path.abspath(__file__))
-csv_path = os.path.join(current_dir, "crop_yield_prediction.csv")
+base_path = os.path.dirname(__file__)
+file_path = os.path.join(base_path, 'crop_yield_prediction.csv')
 model_path = os.path.join(current_dir, "model.pkl")
 
 # 2. Səhifə konfiqurasiyası
