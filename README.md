@@ -47,13 +47,7 @@ Visual Reports: High-quality charts showing the intersection of climate and farm
 
 ## 🎯 Result
 
-### High-Accuracy Models: Successfully predicted crop yields using historical and real-time climate data.
-
-Interactive App: Deployed a Streamlit dashboard for dynamic forecasting and trend visualization.
-
-Automated Pipeline: Integrated APIs, Docker, and SQL into a seamless end-to-end data workflow.
-
-Climate Insights: Identified key environmental drivers impacting global food productivity.
+Sample
 
 ## 🧩 Challenges
 
