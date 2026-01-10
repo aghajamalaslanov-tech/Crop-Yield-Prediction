@@ -8,9 +8,18 @@ import os
 
 # 1. Fayl yollarını avtomatik təyin etmək
 # Bu hissə proqramın öz qovluğunu tapmasını təmin edir
-current_dir = os.path.dirname(os.path.abspath(__file__))
-csv_path = os.path.join(current_dir, 'crop_yield_prediction.csv')
-model_path = os.path.join(current_dir, "model.pkl")
+# 1. Fayl yollarını təyin etmək (Sadə və effektiv yol)
+csv_name = "crop_yield_prediction.csv"
+model_name = "model.pkl"
+
+# Əgər birbaşa fayl adı ilə tapmasa, bunları yoxlayacaq
+if os.path.exists(csv_name):
+    csv_path = csv_name
+    model_path = model_name
+else:
+    # Qovluq strukturuna uyğun yol (Streamlit Cloud üçün)
+    csv_path = os.path.join("streamlit_app", csv_name)
+    model_path = os.path.join("streamlit_app", model_name)
 
 # 2. Səhifə konfiqurasiyası
 st.set_page_config(page_title="Crop Yield Dashboard", page_icon="🌾", layout="wide")
